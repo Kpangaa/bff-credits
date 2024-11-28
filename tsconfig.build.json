@@ -1,4 +1,33 @@
 {
-  "extends": "./tsconfig.json",
-  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+  "compilerOptions": {
+    "module": "ESNext",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2015",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "moduleResolution": "node",
+    "lib": ["es2020", "dom"],
+    "skipDefaultLibCheck": true,
+    "importHelpers": true,
+    "rootDir": ".",
+    "paths": {
+      "@api-extra-pay": ["integrations/api-extrapay-client/src/index.ts"],
+      "@api-loans-client": ["integrations/api-loans-client/src/index.ts"],
+      "@loan-checkout-service": ["integrations/loan-checkout-service/src/index.ts"],
+      "@loans-products-service": ["integrations/loans-products-service/src/index.ts"]
+    },
+  },
+  "exclude": ["node_modules", "tmp"],
+  "compileOnSave": false,
 }
