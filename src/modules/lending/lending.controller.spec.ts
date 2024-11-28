@@ -1,7 +1,7 @@
 import { LendingController } from './lending.controller';
 import { LendingService } from './lending.service';
-import { LoansProductsServiceService } from 'src/integrations/loans-products-service/src';
-import { LoanCheckoutServiceService } from 'src/integrations/loan-checkout-service/src';
+import { LoansProductsServiceService } from '../../integrations/loans-products-service/src';
+import { LoanCheckoutServiceService } from '../../integrations/loan-checkout-service/src';
 import { PepaExecutionContext } from '@pepa/common';
 import { BadRequestException, HttpStatus } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';

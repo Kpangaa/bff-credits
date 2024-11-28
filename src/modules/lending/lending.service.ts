@@ -4,12 +4,12 @@ import { LendingSimulatorMapper } from './mapper/Simulation.mapper';
 import { LocalizedTextService } from './mapper/localized-text.service';
 import { wording } from './resource/wording';
 import { AccreditationLendingResponse } from './types/lending-acreditation';
-import { MICROCREDITO, TERMINALES } from 'src/common/constants';
-import { getWordingByKey, replacePlaceholders } from 'src/common/utils';
+import { MICROCREDITO, TERMINALES } from '../../common/constants';
+import { getWordingByKey, replacePlaceholders } from '../../common/utils';
 import { formatCurrency } from '../../common/utils/formatAmount';
-import { environment } from 'src/config';
-import { LoanCheckoutServiceService } from 'src/integrations/loan-checkout-service/src';
-import { LoansProductsServiceService } from 'src/integrations/loans-products-service/src';
+import { environment } from '../../config';
+import { LoanCheckoutServiceService } from '../../integrations/loan-checkout-service/src';
+import { LoansProductsServiceService } from '../../integrations/loans-products-service/src';
 
 @Injectable()
 export class LendingService {

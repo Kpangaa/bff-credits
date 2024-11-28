@@ -4,8 +4,8 @@ import {
   HttpClientRequestConfig,
   InjectHttpClient,
 } from '@pepa/http-client';
-import { ProductInfo } from 'apps/api/src/constants/types';
-import { UpdateOnboardingDto } from '../../../../apps/api/src/lending/dto/updateOnboarding';
+import { ProductInfo } from '../../../../common/constants';
+import { UpdateOnboardingDto } from '../../../../modules/lending/dto/updateOnboarding.dto.';
 
 @Injectable()
 export class LoansProductsServiceService {

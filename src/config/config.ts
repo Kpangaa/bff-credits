@@ -7,6 +7,7 @@ const env = process.env.NODE_ENV;
 const relative = env === 'test' ? '../../../../' : '../../../';
 const root = path.join(__dirname, relative);
 const envexample = path.join(root, '.env.example');
+console.log("🚀 ~ envexample:", envexample)
 const envfile = env === 'test' ? envexample : path.join(root, '.env');
 const allowEmptyValues = process.env.NODE_ENV === 'test';
 

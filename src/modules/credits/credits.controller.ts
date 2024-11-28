@@ -1,14 +1,14 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Controller, Get, UsePipes, ValidationPipe } from '@nestjs/common';
 import { CreditsService } from './credits.service';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { PepaExecutionContext } from '@pepa/common';
 import { Client, RequestClient, RestResponse } from '@pepa/platform-rest/.';
 import { MatrixCallApi } from './utils/matrix-call-api';
-import { DatalistProductType, PRODUCT_FEATURED } from 'src/common/constants';
-import { ApiLoansServiceService } from 'src/integrations/api-loans-client/src';
-import { ApiExtrapayService } from 'src/integrations/api-extrapay-client/src';
-import { LoanCheckoutServiceService } from 'src/integrations/loan-checkout-service/src';
-import { LoansProductsServiceService } from 'src/integrations/loans-products-service/src';
+import { DatalistProductType, PRODUCT_FEATURED } from '../../common/constants';
+import { ApiLoansServiceService } from '../../integrations/api-loans-client/src';
+import { ApiExtrapayService } from '../../integrations/api-extrapay-client/src';
+import { LoanCheckoutServiceService } from '../../integrations/loan-checkout-service/src';
+import { LoansProductsServiceService } from '../../integrations/loans-products-service/src';
 
 @Controller('credits')
 @ApiTags('Credits - Home Prestamos')
