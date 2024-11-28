@@ -1,5 +1,6 @@
 import { Controller, Get, Inject, Query } from '@nestjs/common';
 import { FaqsService } from './faqs.service';
+import { RestResponse } from '@pepa/platform-rest/.';
 
 @Controller('faqs')
 export class FaqsController {
@@ -13,6 +14,6 @@ export class FaqsController {
         @Query('productKey') productKey: string,
     ) {
         const respFaqs = this.faqsService.getFaqsLending(productKey, this.country);
-        return respFaqs;
+        return new RestResponse(respFaqs);
     }
 }

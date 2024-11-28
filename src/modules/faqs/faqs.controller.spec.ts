@@ -2,6 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { FaqsController } from './faqs.controller';
 import { FaqsService } from './faqs.service';
 import { HttpException } from '@nestjs/common';
+import { RestResponse } from '@pepa/platform-rest/.';
 
 describe('FaqsController', () => {
   let controller: FaqsController;
@@ -38,7 +39,7 @@ describe('FaqsController', () => {
     jest.spyOn(service, 'getFaqsLending').mockReturnValue(expectedFaqs);
 
     const result = controller.faqsLending(productKey);
-    expect(result).toEqual(expectedFaqs);
+    expect(result).toEqual(new RestResponse(expectedFaqs));
     expect(service.getFaqsLending).toHaveBeenCalledWith(productKey, 'US');
   });
 
